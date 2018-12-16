@@ -4,7 +4,7 @@
 ### Create general notification and progress bar notifications and implement bundle-based parameter passing
 
 
-#####调用示例如下
+##### 调用示例如下
  MG_Notification mg_notification = new MG_Notification.Builder(this, MG_NotificationType.NORMAL_NOTIFICATION)
                 .title("标题 title")
                 .message("内容  content")
