@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.content.Context;
 import android.os.Build;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
 
 /**
  * 使用Builder模式
@@ -66,7 +67,7 @@ public class MG_Notification extends MG_notificationHandler{
         private int max_progress;
         private int rate_progress;
 
-        public Builder(Context mContext, MG_NotificationType type) {
+        public Builder(@NonNull Context mContext, MG_NotificationType type) {
             this.mContext = mContext;
             this.type = type;
         }
