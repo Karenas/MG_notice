@@ -1,13 +1,22 @@
 # MG_notice
 
-### 可创建一般通知与进度条通知，
+### 可创建一般通知与进度条通知，并实现基于bundle的参数传递
+### Create general notification and progress bar notifications and implement bundle-based parameter passing
 
 
-#### MG_Notification mg_notice_progress = new MG_Notification.Builder(this, MG_NotificationType.PROGRESS_NOTIFICATION)
-####                .title("标题_进度条")
-####                .message("内容_进度条")
-####                .progress_max(100) //最大值
-####                .progress_rate(1)  //当前值,初始为默认为0
-####                .intentAction("com.example.otherPage") //点击跳转的隐式action
-####                .create();
-####        mg_notice_progress.show();
+#####调用示例如下
+ MG_Notification mg_notification = new MG_Notification.Builder(this, MG_NotificationType.NORMAL_NOTIFICATION)
+                .title("标题 title")
+                .message("内容  content")
+                .intentAction("com.example.otherPage")  //隐式跳转action
+                .intentBundle(bundle) //跳转传值
+                .create();
+        mg_notification.show();
+
+
+##### 若需要对通知样式修改，可以配置notification_view_custom.xml文件
+##### If you need to modify the notification style, you can configure the notification_view_custom.xml file.
+
+
+
+
