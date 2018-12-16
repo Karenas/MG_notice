@@ -6,11 +6,17 @@
 
 ##### 调用示例如下
  MG_Notification mg_notification = new MG_Notification.Builder(this, MG_NotificationType.NORMAL_NOTIFICATION)
+ 
                 .title("标题 title")
+                
                 .message("内容  content")
+                
                 .intentAction("com.example.otherPage")  //隐式跳转action
+                
                 .intentBundle(bundle) //跳转传值
+                
                 .create();
+                
         mg_notification.show();
 
 
